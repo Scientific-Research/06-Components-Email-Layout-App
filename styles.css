@@ -6,17 +6,18 @@
 }
 
 body {
+  /*we have to define height and width with vh and vw here, otherwise our CSS GRID Layout will not fill the entire space up!*/
   height: 100vh;
   width: 100vw;
   font-family: sans-serif;
   color: #343a40;
   font-size: 24px;
 
-  /*We need here a GRID system because we have two dimentional system => CSS GRID includes 2 rows and 4 rows*/
+  /*WE IMPLEMENT CSS GRID IN PARENT OF OUR ELEMENT => IT MEANS HERE IN BODY - We need here a GRID system because we have two dimentional system => CSS GRID includes 2 rows and 4 rows*/
   display: grid;
-  /*first of all, every section with pixel and the variable section which will fill up the remaining part with fr*/
-  grid-template-columns: 100px 400px 1fr 200px;
-  grid-template-rows: 100px 1fr;
+  /*first of all, every section with pixel and the variable section which will be filled up the remaining space with 1fr*/
+  grid-template-columns: 80px 400px 1fr 250px;
+  grid-template-rows: 80px 1fr;
 }
 
 nav {
