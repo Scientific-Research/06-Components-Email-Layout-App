@@ -12,12 +12,22 @@ body {
   font-family: sans-serif;
   color: #343a40;
   font-size: 24px;
+  text-align: center; /*This will be get inherited by all other components!*/
+  font-weight: bold; /*This will be get inherited by all other components!*/
 
   /*WE IMPLEMENT CSS GRID IN PARENT OF OUR ELEMENT => IT MEANS HERE IN BODY - We need here a GRID system because we have two dimentional system => CSS GRID includes 2 rows and 4 rows*/
   display: grid;
   /*first of all, every section with pixel and the variable section which will be filled up the remaining space with 1fr*/
   grid-template-columns: 80px 400px 1fr 250px;
   grid-template-rows: 80px 1fr;
+}
+
+nav,
+menu,
+section,
+main,
+aside {
+  padding-top: 24px;
 }
 
 nav {
@@ -30,7 +40,7 @@ nav {
 menu {
   background-color: #7048e8;
   color: #fff;
-  grid-column: 2/-1; /*from second column untill end*/
+  grid-column: 2/-1; /*from second column untill the end*/
   grid-row: 1/2;
 }
 
