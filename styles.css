@@ -61,6 +61,12 @@ button {
   /*buttons aligned center - because they are treated as inline element like text and in body text-align:center => button get inherited this feature from body too!*/
 }
 
+/*We use LAST CHILD PSEUDO CLASS here to change its color to red!
+OF COURSE THE GOOD NEWS IS THAT => THEY ARE ALL BUTTONS, THAT'S WHY LAST CHILD WORKS HERE VERY WELL!*/
+menu button:last-child {
+  background-color: #d6336c;
+}
+
 /*Inbox*/
 section {
   background-color: #e9ecef;
