@@ -46,7 +46,7 @@ menu {
   display: flex;
   align-items: center;
   /* justify-content: center; */
-  gap: 12px;
+  gap: 12px; /*gap as default is horizontally! => it makes the distance between items in a row direction(horizontally)*/
   padding: 0 40px;
 }
 
@@ -78,12 +78,18 @@ section {
   grid-column: 2/3;
   grid-row: 2/-1;
   padding: 40px;
+
+  /*INSTEAD OF USING THE FLEXBOX HERE, WE CAN USE THE MARGIN-BOTTOM:40px BELOW IN .email AND IT WORKS WELL TOO! BUT MORE ADVANCED METHOD IS TO USE THE DISPLAY:FLEX */
+  display: flex;
+  flex-direction: column; /*We have to change the flex direction to column, otherwise, all the items are shown in a row(horizontally!), but we want to be shown in a column(vertically!)*/
+  gap: 40px; /*and now, the gap would be in a column way(vertically) and not in a row(horizontally) anymore!*/
 }
 
 .email {
   background-color: #adb5bd;
   height: 96px;
-  margin-bottom: 40px; /*to separate these 10 Email boxes from each other!*/
+  /* margin-bottom: 40px; to separate these 10 Email boxes from each other! 
+  INSTEAD OF USING MARGIN-BOTTOM HERE, I USED FLEXBOX IN SECTION ABOVE, ... BUT ANY WAY, MARGIN-BOTTOM HERE WORKS WELL TOO!*/
   align-content: center;
   font-weight: 800;
   scroll-behavior: auto;
