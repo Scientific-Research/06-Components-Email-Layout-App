@@ -39,9 +39,18 @@ nav {
 
 menu {
   background-color: #7048e8;
-  color: #fff;
   grid-column: 2/-1; /*from second column untill the end*/
   grid-row: 1/2;
+}
+
+button {
+  font-size: 16px;
+  background-color: #5f3dc4;
+  border: none;
+  cursor: pointer;
+  color: #fff; /*It doesn't get inherited from the parent => menu, i don't know why? that's why i have to write it here again manually and remove it from menu*/
+  padding: 8px 12px;
+  /*buttons aligned center - because they are treated as inline element like text and in body text-align:center => button get inherited this feature from body too!*/
 }
 
 /*Inbox*/
@@ -53,7 +62,6 @@ section {
 
 /*Email-View*/
 main {
-  background-color: #b8cbdd;
   grid-column: 3/4;
   grid-row: 2/-1;
 }
