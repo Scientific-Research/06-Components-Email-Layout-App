@@ -9,22 +9,43 @@ body {
   font-family: sans-serif;
   color: #343a40;
   font-size: 24px;
+
+  /*We need here a GRID system because we have two dimentional system => CSS GRID includes 2 rows and 4 rows*/
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  grid-template-rows: auto 1fr;
 }
 
 nav {
   background-color: #343a40;
   color: #fff;
+  grid-column: 1/2;
+  grid-row: 1/-1;
 }
 
 menu {
   background-color: #7048e8;
   color: #fff;
+  grid-column: 2/-1;
+  grid-row: 1/2;
 }
 
+/*Inbox*/
 section {
   background-color: #e9ecef;
+  grid-column: 2/3;
+  grid-row: 2/-1;
+}
+
+/*Email-View*/
+main {
+  background-color: #b8cbdd;
+  grid-column: 3/4;
+  grid-row: 2/-1;
 }
 
 aside {
   background-color: #e9ecef;
+  grid-column: 4/5;
+  grid-row: 2/-1;
 }
