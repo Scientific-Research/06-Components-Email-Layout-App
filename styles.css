@@ -23,7 +23,6 @@ body {
 }
 
 nav,
-menu,
 section,
 main,
 aside {
@@ -41,10 +40,19 @@ menu {
   background-color: #7048e8;
   grid-column: 2/-1; /*from second column untill the end*/
   grid-row: 1/2;
+
+  /*THE PARENT OF BUTTONS IS MENU => THAT'S WHY I DEFINE THE FLEXBOX HERE:*/
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 12px;
+  padding: 0 40px;
 }
 
 button {
+  display: inline-block; /*This is OPTIONAL*/
   font-size: 16px;
+  font-weight: bold;
   background-color: #5f3dc4;
   border: none;
   cursor: pointer;
