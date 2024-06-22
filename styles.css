@@ -17,7 +17,8 @@ body {
 
   /*WE IMPLEMENT CSS GRID IN PARENT OF OUR ELEMENT => IT MEANS HERE IN BODY - We need here a GRID system because we have two dimentional system => CSS GRID includes 2 rows and 4 rows*/
   display: grid;
-  /*first of all, every section with pixel and the variable section which will be filled up the remaining space with 1fr*/
+  /*first of all, every section with pixel and the variable section which will be filled up the remaining space with 1fr
+  ADVANTAGE IS: WHEN WE CHANGE THE SIZE OF THE PAGE(RESPONSIVENESS MODE), EMAIL VIEW SPACE CHANGES TOO!.*/
   grid-template-columns: 80px 400px 1fr 250px;
   grid-template-rows: 80px 1fr;
 }
@@ -65,6 +66,9 @@ button {
 OF COURSE THE GOOD NEWS IS THAT => THEY ARE ALL BUTTONS, THAT'S WHY LAST CHILD WORKS HERE VERY WELL!*/
 menu button:last-child {
   background-color: #d6336c;
+  /* margin-left: 900px; Instead of Manually calculate this value to 900px, we can use the auto*/
+  margin-left: auto; /*auto will calculate the position of Trash button base on the width of the container and we don't need to calcualte it manually!
+  ADVANTAGE IS: WHEN WE CHANGE THE SIZE OF THE PAGE(RESPONSIVENESS MODE), THIS LEFT MARGIN CHANGES TOO!.*/
 }
 
 /*Inbox*/
