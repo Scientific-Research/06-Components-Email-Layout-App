@@ -14,8 +14,9 @@ body {
 
   /*We need here a GRID system because we have two dimentional system => CSS GRID includes 2 rows and 4 rows*/
   display: grid;
-  grid-template-columns: auto auto 1fr auto;
-  grid-template-rows: auto 1fr;
+  /*first of all, every section with pixel and the variable section which will fill up the remaining part with fr*/
+  grid-template-columns: 100px 400px 1fr 200px;
+  grid-template-rows: 100px 1fr;
 }
 
 nav {
