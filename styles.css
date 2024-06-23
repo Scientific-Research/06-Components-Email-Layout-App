@@ -78,6 +78,7 @@ section {
   grid-column: 2/3;
   grid-row: 2/-1;
   padding: 40px;
+  overflow: scroll;
 
   /*INSTEAD OF USING THE FLEXBOX HERE, WE CAN USE THE MARGIN-BOTTOM:40px BELOW IN .email AND IT WORKS WELL TOO! BUT MORE ADVANCED METHOD IS TO USE THE DISPLAY:FLEX */
   display: flex;
@@ -90,9 +91,17 @@ section {
   height: 96px;
   /* margin-bottom: 40px; to separate these 10 Email boxes from each other! 
   INSTEAD OF USING MARGIN-BOTTOM HERE, I USED FLEXBOX IN SECTION ABOVE, ... BUT ANY WAY, MARGIN-BOTTOM HERE WORKS WELL TOO!*/
-  align-content: center;
+
   font-weight: 800;
   scroll-behavior: auto;
+
+  /* align-content: center; */
+  /*INSTEAD OF WRITING THE ABOVE LINE, WE HAVE TO WRITE THESE BELOW THREE LINES TO DO THE SAME:*/
+  display: flex; /*unfortunately I don't know why i have to define the display:flex here again, although i defined it already above in section as its parent!*/
+  align-items: center;
+  justify-content: center;
+  /* flex: 0 0 auto; OR*/
+  flex-shrink: 0; /*Otherwise all 10 email boxes will be shrinked after specifying this overflow: scroll; in section above!*/
 }
 
 /*Email-View*/
